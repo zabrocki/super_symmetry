@@ -1,0 +1,169 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{lipsum}
+\usepackage{color}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conj}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+
+
+\newcommand{\todo}[1]{\vspace{5 mm}\par \noindent
+\marginpar{\textsc{ToDo}}
+\framebox{\begin{minipage}[c]{0.95 \textwidth}
+\tt #1 \end{minipage}}\vspace{5 mm}\par}
+
+%remove the comment from the following line to remove all the
+% 'to do' remarks:
+%\renewcommand{\todo}[1]{} 
+
+\newcommand{\idiot}[1]{\vspace{5 mm}\par \noindent
+\marginpar{\textsc{Note}}
+\framebox{\begin{minipage}[c]{0.95 \textwidth}
+#1 \end{minipage}}\vspace{5 mm}\par}
+
+%remove the comment from the following line to remove all the
+% extra proofs:
+%\renewcommand{\idiot}[1]{}
+
+
+\def\la{{\lambda}}
+\def\al{{\alpha}}
+\def\be{{\beta}}
+\def\ga{{\gamma}}
+\def\shuf{{\sqcup\!\sqcup}}
+\def\QQ{{\mathbb Q}}
+\def\RR{{\mathcal R}}
+\def\NN{{\mathbb N}}
+\def\CC{{\mathbb C}}
+\def\ZZ{{\mathbb Z}}
+\def\F{{\mathcal F}}
+\def\st{{\tilde s}}
+\def\lab{{\bar \lambda}}
+\def\mub{{\bar \mu}}
+\def\hht{{\tilde h}}
+\def\bfla{{\nu\!\!\!\nu}}
+\def\pp{{\bf p}}
+\def\mb{{\overline m}}
+\def\mt{{\tilde m}}
+\def\bP{{\mathcal P}}
+\def\bT{{\mathcal T}}
+\def\bC{{\mathcal C}}
+\def\oP{{\overline\bP}}
+\def\oT{{\overline\bT}}
+\def\oC{{\overline\bC}}
+\def\bK{{\mathcal K}}
+\def\bfp{{\mathbf p}}
+\def\bfpb{{\overline \bfp}}
+\def\et{{\tilde e}}
+\def\het{{\tilde{h\!e}}}
+\def\mvdash{{\,\vdash\!\!\vdash}}
+\def\bv{{|\!|}}
+\def\HX{{H}}
+\def\HEX{{H\!\!\!E}}
+\def\gb{{\overline g}}
+\def\db{{\overline d}}
+\def\lab{{\overline \la}}
+\def\mub{{\overline \mu}}
+\def\gab{{\overline \ga}}
+\def\PMSym{{{\mathcal {PM}}Sym}}
+\def\dcl{{\{\!\!\{}}
+\def\dcr{{\}\!\!\}}}
+
+
+\newcommand{\pchoose}[2]{\begin{pmatrix}#1\\ #2\end{pmatrix}}
+\newcommand{\bchoose}[2]{\begin{bmatrix}#1\\ #2\end{bmatrix}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Young diagrams, grace a Francois Bergeron
+
+\newdimen\squaresize \squaresize=10pt
+\newdimen\thickness \thickness=0.4pt
+
+
+\def\square#1{\hbox{\vrule width \thickness
+     \vbox to \squaresize{\hrule height \thickness\vss
+        \hbox to \squaresize{\hss#1\hss}
+     \vss\hrule height\thickness}
+\unskip\vrule width \thickness}
+\kern-\thickness}
+
+\def\vsquare#1{\vbox{\square{$#1$}}\kern-\thickness}
+\def\blk{\omit\hskip\squaresize}
+\def\noir{\vrule height\Squaresize width\Squaresize}%
+
+\def\young#1{
+\vbox{\smallskip\offinterlineskip
+\halign{&\vsquare{##}\cr #1}}}
+
+\def\thisbox#1{\kern-.09ex\fbox{#1}}
+\def\downbox#1{\lower1.200em\hbox{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newdimen\Squaresize \Squaresize=15pt
+\newdimen\Thickness \Thickness=0.4pt
+
+
+\def\Square#1{\hbox{\vrule width \Thickness
+     \vbox to \Squaresize{\hrule height \Thickness\vss
+        \hbox to \Squaresize{\hss#1\hss}
+     \vss\hrule height\Thickness}
+\unskip\vrule width \Thickness}
+\kern-\Thickness}
+
+\def\Vsquare#1{\vbox{\Square{$#1$}}\kern-\Thickness}
+\def\Blk{\omit\hskip\Squaresize}
+\def\Noir{\vrule height\Squaresize width\Squaresize}%
+
+\def\Young#1{
+\vbox{\smallskip\offinterlineskip
+\halign{&\Vsquare{##}\cr #1}}}
+
+
+\title[Super-symmetric functions]{Super-symmetric functions}
+
+\author[Mike Zabrocki]{Mike Zabrocki}%
+\address{Department of Mathematics and Statistics, York University, Toronto, Ontario M3J 1P3,
+Canada} \email{zabrocki@mathstat.yorku.ca}%
+
+\date{}  % Activate to display a given date or no date
+
+\thanks{Work supported by NSF grants DMS-1300512 and DMS-1458061, and by NSERC}
+
+%%%% Version posted on the arxiv Sat, May 21 around 12:45pm
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+Notes
+\end{abstract}
+
+%\tableofcontents
+
+
+\begin{section}{Introduction}
+
+\end{section}
+
+\begin{thebibliography}{99}
+\bibitem[]{} 
+\end{thebibliography}
+
+\end{document}
